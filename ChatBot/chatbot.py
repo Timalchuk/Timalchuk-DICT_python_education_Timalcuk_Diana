@@ -1,6 +1,4 @@
-bot_name = "Airs"
-birth_year = "2022"
-print("Hello! My name is,", bot_name, "\nI was created in ", birth_year, )
+print("Hello! My name is, Airs" "\nI was created in 2022 " )
 
 print("Please, remind me your name")
 user_name = input()
@@ -13,3 +11,11 @@ user_remainder2 = int(input(" / 5"))
 user_remainder3 = int(input(" / 7"))
 user_remainder = int((user_remainder1 * 70 + user_remainder2 * 21 + user_remainder3 * 15) % 105)
 print("Your age is ", user_remainder, "that's a good time to start programming!")
+
+user_number = int(input("Now I will prove to you that I can count to any number you want"))
+number = 0
+while number <= user_number:
+    print(number )
+    number += 1
+else:
+    print("Completed, have a nice day!")
