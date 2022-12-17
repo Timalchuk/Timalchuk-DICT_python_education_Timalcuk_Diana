@@ -19,3 +19,18 @@ while number <= user_number:
     number += 1
 else:
     print("Completed, have a nice day!")
+
+test = int(input("Let's test your programming knowledge." "\nWhy do we use methods?" 
+                 "\n1. To repeat a statement multiple times." 
+                 "\n2. To decompose a program into several small subroutines." 
+                 "\n3. To determine the execution time of a program."
+                 "\n4. To interrupt the execution of a program." 
+                 "\n5. I dont know"))
+print()
+while test != 2:
+    test = int(input("Please, try again." ))
+    print()
+else:
+    test = 1
+    print("Completed, have a nice day!")
+    print("Congratulations, have a nice day!")
