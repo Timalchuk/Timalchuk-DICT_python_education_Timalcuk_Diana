@@ -41,7 +41,7 @@ while True:
     if len(wrong) > 6:
 
         print('You lost!')
-        print('', take)
+        print("Wrong", take)
         break
     if '_' not in guessed:
         print('You win!')
