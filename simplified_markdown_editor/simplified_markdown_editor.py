@@ -7,12 +7,12 @@ class Editor:
 
     def menu(self):
         while True:
-            line = input('Choose a formatter:>')  # Ввод выбранного форматирования или команды
+            line = input('Выберите средство форматирования:>')  # Ввод выбранного форматирования или команды
             if line not in self.formatters and line not in self.commands:
-                print('Unknown formatting type or command')  # Вывод сообщения об ошибке
+                print('Неизвестный тип форматирования или команда')  # Вывод сообщения об ошибке
                 continue
             if line == self.commands[0]:
-                print(f'''Available formatters:{' '.join(self.formatters)}
+                print(f'''Доступные средства форматирования:{' '.join(self.formatters)}
 Special commands:{' '.join(self.commands)}''')  # Вывод списка
             elif line == self.commands[1]:
                 break
@@ -25,38 +25,38 @@ Special commands:{' '.join(self.commands)}''')  # Вывод списка
 
     def format(self, formatter):
         if formatter == self.formatters[0]:
-            line = input('Text:>')
+            line = input('Текст :>')
             self.text += line + ' '
         elif formatter == self.formatters[1]:
-            line = input('Text:>')
+            line = input('Текст:>')
             self.text += '**' + line + '** '  # Добавление жирного форматирования в текущий текст
         elif formatter == self.formatters[2]:
-            line = input('Text:>')
+            line = input('Текст:>')
             self.text += '*' + line + '* '  # Добавление курсивного форматирования в текущий текст
         elif formatter == self.formatters[3]:
-            line = input('Text:>')
+            line = input('Текст:>')
             self.text += '`' + line + '` '  # Добавление форматирования встроенного кода в текущий текст
         elif formatter == self.formatters[4]:
-            label = input('Label:>')
+            label = input('Этикетка:>')
             url = input('URL:>')
             self.text += '[%s](%s) ' % (label, url)  # Добавление ссылки в текущий текст
         elif formatter == self.formatters[5]:
-            level = int(input('Level:>'))
-            line = input('Text:>')
+            level = int(input('Уровень:>'))
+            line = input('Текст:>')
             self.text += level * '#' + line + ' '  # Добавление заголовка в текущий текст
         elif formatter == self.formatters[7]:
-            rows = int(input('Number of rows:>'))
+            rows = int(input('Количество рядов:>'))
             while rows <= 0:
-                rows = input('The numbers of rows should be greater than zero/nNumber of rows:>')
+                rows = input('Количество строк должно быть больше нуля/количество строк:>')
             for i in range(1, rows + 1):
-                row = input('Row #%d:>' % i)
+                row = input('Ряд #%d:>' % i)
                 self.text += '%d. %s\n' % (i, row)  # Добавление элементов упорядоченного списка в текущий текст
         elif formatter == self.formatters[6]:
-            rows = int(input('Number of rows:>'))
+            rows = int(input('Количество рядов:>'))
             while rows <= 0:
-                rows = input('The numbers of rows should be greater than zero/nNumber of rows:>')
+                rows = input('Количество строк должно быть больше нуля/количество строк:>')
             for i in range(1, rows + 1):
-                row = input('Row #%d:>' % i)
+                row = input('Ряд #%d:>' % i)
                 self.text += '* %s\n' % row  # Добавление элементов неупорядоченного списка в текущий текст
         elif formatter == self.formatters[8]:
             self.text += '\n'  # Добавление перевода строки в текущий текст
